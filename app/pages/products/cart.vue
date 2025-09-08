@@ -18,7 +18,7 @@
     <p>Total Cart: {{ cart.items.length }}</p>
     <p>Total: {{ cart.total }}</p>
 
-    <p v-if="!cart.items.length">No cart item found!</p>
+    <p v-if="!cart.items.length" style="color: #ffc107;">No cart item found!</p>
 
     <ul style="list-style-type: none;" v-else>
       <li style="display: flex; gap: 10px; align-items: center;"
@@ -30,7 +30,7 @@
       </li>
     </ul>
 
-    <p v-if="maximumCart">You have reached the maximum limit of 3 items in the cart.</p>
+    <p v-if="maximumCart" style="color: tomato;">You have reached the maximum limit of 3 items in the cart!</p>
   </div>
 </template>
 
