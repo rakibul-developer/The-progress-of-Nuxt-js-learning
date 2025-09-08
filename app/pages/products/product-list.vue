@@ -2,6 +2,7 @@
     <div>
         <h3>Product List Page</h3>
         <input v-model="newProduct" type="text" placeholder="Add Your New Product" />
+        <p>{{ newProduct }}</p>
         <button
             :disabled="newProduct.trim() === ''"
             @click="addProduct"
@@ -10,9 +11,12 @@
         </button>
         <p v-if="!products.length">No product found!</p>
         <ul style="list-style-type: none;" v-else>
-            <li v-for="(product, index) in products"
-            :key="index">
-                <p>{{ index + 1 }}. {{ product }}</p>
+            <li style="display: flex; gap: 10px; align-items: center;"
+                v-for="(product, index) in products"
+                :key="index"
+            >
+                <span>{{ index + 1 }}.</span>
+                <p>{{ product }}</p>
             </li>
         </ul>
         <br>
