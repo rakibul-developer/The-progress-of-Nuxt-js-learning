@@ -8,6 +8,7 @@
 <template>
     <div>
         <h2>Admin Dashboard</h2>
+        <Counter />
     </div>
 </template>
 
